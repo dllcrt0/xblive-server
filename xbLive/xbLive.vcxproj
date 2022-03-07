@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ae3ee0d5-e728-45a0-b4bc-8a43a7247204}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>xbLive</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)src;</IncludePath>
+    <ProjectPublicIncludePath>$(ProjectDir)src</ProjectPublicIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)src;</IncludePath>
+    <ProjectPublicIncludePath>$(ProjectDir)src</ProjectPublicIncludePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="src\database\helper\mysqlHelper.cpp" />
+    <ClCompile Include="src\database\mysql.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\net\crypto\sha1.cpp" />
+    <ClCompile Include="src\net\handler\clientHandler.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetBO3.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetCheckToken.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetConnect.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetDownloadPlugin.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetChallengeResponse.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetChangelog.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetKV.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetKVStats.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetPluginPatches.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetPlugins.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetTime.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetTitlePatches.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetGetUpdate.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetHeartbeat.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetMetric.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetRedeemToken.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetWelcome.cpp" />
+    <ClCompile Include="src\net\handler\packets\packetXOSC.cpp" />
+    <ClCompile Include="src\net\security\security.cpp" />
+    <ClCompile Include="src\net\socket.cpp" />
+    <ClCompile Include="src\utils\io\binaryReader.cpp" />
+    <ClCompile Include="src\utils\io\binaryWriter.cpp" />
+    <ClCompile Include="src\utils\log.cpp" />
+    <ClCompile Include="src\utils\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\database\helper\mysqlHelper.h" />
+    <ClInclude Include="src\database\mysql.h" />
+    <ClInclude Include="src\net\crypto\sha1.h" />
+    <ClInclude Include="src\net\handler\clientHandler.h" />
+    <ClInclude Include="src\net\handler\packets\packetBO3.h" />
+    <ClInclude Include="src\net\handler\packets\packetCheckToken.h" />
+    <ClInclude Include="src\net\handler\packets\packetConnect.h" />
+    <ClInclude Include="src\net\handler\packets\packetDownloadPlugin.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetChallengeResponse.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetChangelog.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetKV.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetKVStats.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetPluginPatches.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetPlugins.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetTime.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetTitlePatches.h" />
+    <ClInclude Include="src\net\handler\packets\packetGetUpdate.h" />
+    <ClInclude Include="src\net\handler\packets\packetHeartbeat.h" />
+    <ClInclude Include="src\net\handler\packets\packetMetric.h" />
+    <ClInclude Include="src\net\handler\packets\packetRedeemToken.h" />
+    <ClInclude Include="src\net\handler\packets\packetWelcome.h" />
+    <ClInclude Include="src\net\handler\packets\packetXOSC.h" />
+    <ClInclude Include="src\net\security\security.h" />
+    <ClInclude Include="src\net\socket.h" />
+    <ClInclude Include="src\utils\io\binaryReader.h" />
+    <ClInclude Include="src\utils\io\binaryWriter.h" />
+    <ClInclude Include="src\utils\json.h" />
+    <ClInclude Include="src\utils\log.h" />
+    <ClInclude Include="src\utils\structs.h" />
+    <ClInclude Include="src\utils\utils.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -L/usr/lib -lmysqlcppconn %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-pthread -L/usr/lib -lmysqlcppconn %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
